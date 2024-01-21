@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript colorChanger() Hands-On</title>
+</head>
+
+<style>
+  #colorBox {
+        width: 20rem;
+        height: 20rem;
+        border-radius: 10px;
+        background-color: green;
+        margin-bottom: 2rem;
+
+    }
+
+  button {
+        background-color: black;
+        color: pink;
+        margin-left: 50px;
+        padding: 20px 60px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 30px;
+        border: none;
+        transition: background-color 0.5s, color 0.5s;
+    }
+    
+  button:hover{
+        background-color: pink;
+        color: darkviolet;
+        box-shadow: 10px 0px 10px pink(209, 137, 43);
+        font-weight: bolder;
+
+    }
+
+  body {
+      width: auto;
+      height: 41rem;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       overflow: hidden;
+       background: linear-gradient(90deg,rgba(2,0,.6,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+
+    }
+
+  h1 {
+        color: palevioletred;
+
+    }
+
+  .boxs{
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 6px solid rgb(255,255,255,0.8);
+        border-radius: 30px;
+    }
+
+  .boxs:nth-child(1){
+        top: 12%;
+        left: 42%;
+        animation: animate 4s linear infinite;
+
+    }
+
+  .boxs:nth-child(2){
+        top: 70%;
+        left: 42%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(3){
+        top: 17%;
+        left: 6%;
+        animation: animate 4s linear infinite;
+
+    }
+
+  .boxs:nth-child(4){
+        top: 20%;
+        left: 60%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(5){
+        top: 67%;
+        left: 10%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(6){
+        top: 80%;
+        left: 70%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(7){
+        top: 60%;
+        left: 80%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(8){
+        top: 32%;
+        left: 25%;
+        animation: animate 4s linear infinite;
+
+    }
+  .boxs:nth-child(9){
+        top: 90%;
+        left: 25%;
+        animation: animate 4s linear infinite;
+
+    }
+  .box-s:nth-child(10){
+        top: 20%;
+        left: 80%;
+        animation: animate 4s linear infinite;
+
+    }
+    
+  @keyframes animate{
+        0%{
+         transform: scale(0) translateY(0) rotate(0);
+        opacity: 1;  
+      }  
+      100%{
+            transform: scale(1.3) stranslateY(-90px) rotate(360deg);
+            opacity: 1;
+        }
+         
+    }
+</style>
+<body>
+    <h1> JavaScript colorbox Hands-On</h1>
+    <div class="box">
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        <div class= "boxs"></div>
+        
+
+       
+    <div id="colorBox"></div>
+    
+    <div class = "container">
+        <button id ="changeColorBtn">Change Color</button>
+    </div>
+
+    <script>
+        const colorBox= document.getElementById("colorBox");
+        let changeColorBtn = document.getElementById("changeColorBtn");
+
+        changeColorBtn.addEventListener('click', changeColor)
+
+        function changeColor() {
+           if  (colorBox.style.backgroundColor ===  "green") {
+                 colorBox.style.background = "blue"
+           } else {
+            colorBox.style.backgroundColor = "green";
+           }
+           
+            
+        };
+       
+
+    
+    </script>
+</body>
+</html>
